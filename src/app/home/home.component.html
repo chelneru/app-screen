@@ -1,0 +1,8 @@
+<div class="background-div">
+  <video autoplay muted loop id="myVideo">
+
+    <source  *ngIf="light ==='day'" src="../../assets/day-sky.mp4" type="video/mp4">
+    <source  *ngIf="light ==='night'" src="../../assets/night-sky.mp4" type="video/mp4">
+  </video>
+  <div class="clock">{{now}}</div></div>
+

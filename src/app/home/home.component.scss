@@ -1,0 +1,38 @@
+@import '@angular/material/prebuilt-themes/pink-bluegrey.css';
+
+.background-div {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  text-align: center;
+  background-color: #2196F3;
+  .clock {
+    color:white;
+    text-shadow: -2px 0 #0D47A1, 0 2px #0D47A1, 2px 0 #0D47A1, 0 -2px #0D47A1;
+    margin: 0 auto;
+    font-size: 30vh;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+
+  }
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: auto;
+  height: auto;
+}
+
+app-home {
+  height: 100%;
+}
