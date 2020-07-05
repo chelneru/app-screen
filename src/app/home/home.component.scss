@@ -1,25 +1,75 @@
-@import '@angular/material/prebuilt-themes/pink-bluegrey.css';
 
 .background-div {
   height: 100%;
   width: 100%;
   position: relative;
-
+  background-repeat: round;
   text-align: center;
-  background-color: #2196F3;
-  .clock {
-    color:white;
-    text-shadow: -2px 0 #0D47A1, 0 2px #0D47A1, 2px 0 #0D47A1, 0 -2px #0D47A1;
-    margin: 0 auto;
-    font-size: 30vh;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateY(-50%);
-    transform: translateX(-50%);
+  background-image: url("/assets/day_background.png");
+
+  .main-text {
+    color: white;
+    text-shadow: -2px 0 #000000, 0 2px #000000, 2px 0 #000000, 0 -2px #000000;
 
   }
 }
+  .time {
+    display: inline-block;
+    width: 50%;
+    .clock {
+      font-size: 21vh;
+      margin: 0 auto;
+      position: absolute;
+      top: 20%;
+      left: 26%;
+      transform: translateY(-50%);
+      transform: translateX(-50%);
+
+    }
+
+    .date {
+      font-size: 9vh;
+      margin: 0 auto;
+      position: absolute;
+      top: 39%;
+      left: 19%;
+      transform: translateY(-50%);
+      transform: translateX(-50%);
+    }
+
+    .week {
+      font-size: 9vh;
+      margin: 0 auto;
+      position: absolute;
+      top: 51%;
+      left: 13%;
+      transform: translateY(-50%);
+      transform: translateX(-50%);
+    }
+  }
+  .weather{
+    padding-top: 6vh;
+    display: inline-block;
+    width: 50%;
+    padding-left: 90vh;
+    .weather-icon{
+      width: 25vh;
+      float: left;
+    }
+    .weather-temp{
+      font-size: 10vh;
+      margin-top: 25vh;
+      text-align: left;
+    }
+    .weather-desc{
+      font-size: 7vh;
+      margin-top: 4vh;
+      width: 21vh;
+      line-height: 7vh;
+    }
+  }
+
+
 #myVideo {
   position: fixed;
   right: 0;

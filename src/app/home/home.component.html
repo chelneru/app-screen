@@ -1,8 +1,15 @@
-<div class="background-div">
-  <video autoplay muted loop id="myVideo">
+<div class="background-div" >
 
-    <source  *ngIf="light ==='day'" src="../../assets/day-sky.mp4" type="video/mp4">
-    <source  *ngIf="light ==='night'" src="../../assets/night-sky.mp4" type="video/mp4">
-  </video>
-  <div class="clock">{{now}}</div></div>
+  <div class="time">
+  <div class="clock main-text">{{now}}</div>
+  <div class="date main-text">{{date}}</div>
+  <div class="week main-text">{{week}}</div>
+  </div>
+  <div class="weather">
+    <img class="weather-icon" src="{{weather.iconString}}">
+    <div class="weather-temp main-text">{{weather.temperature}}</div>
+    <div class="weather-desc main-text">{{weather.description}}</div>
+
+  </div>
+</div>
 
