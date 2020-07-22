@@ -26,6 +26,12 @@ export class HomeComponent implements OnInit {
    weatherService: WeatherService
   constructor(private weatherServiceVar: WeatherService) {
     this.weatherService = weatherServiceVar;
+    this.weather = {
+      iconString:'',
+      description:'',
+      temperature:''
+    }
+
     this.UpdateTime();
     this.UpdateSimpleWeather();
 

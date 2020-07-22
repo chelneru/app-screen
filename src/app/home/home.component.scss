@@ -31,10 +31,11 @@
       font-size: 9vh;
       margin: 0 auto;
       position: absolute;
-      top: 39%;
-      left: 19%;
+      top: 41vh;
+      left: 34vh;
       transform: translateY(-50%);
       transform: translateX(-50%);
+    
     }
 
     .week {
@@ -48,10 +49,10 @@
     }
   }
   .weather{
-    padding-top: 6vh;
+    padding-top: 3vh;
     display: inline-block;
-    width: 50%;
-    padding-left: 90vh;
+    width: 68vh;
+    padding-left: 91vh;
     .weather-icon{
       width: 25vh;
       float: left;
@@ -85,4 +86,5 @@
 
 app-home {
   height: 100%;
+  width: 100%;
 }
