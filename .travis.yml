@@ -9,7 +9,7 @@ cache:
   directories:
   - "./node_modules"
 before_install:
-  - echo $super_secret_password | gpg --passphrase-fd 0 src/environments/environments.prod.ts.gpg
+  - echo $super_secret_password | gpg --passphrase-fd 0 src/environments/environment.prod.ts.gpg
 install:
 - npm install
 script:
