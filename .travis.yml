@@ -1,20 +1,20 @@
 dist: trusty
 sudo: false
-
 language: node_js
 node_js:
-  - "10"
-
+- '10'
 addons:
   chrome: stable
-
 cache:
   directories:
-    - ./node_modules
-
+  - "./node_modules"
+before_install:
+  - echo $super_secret_password | gpg --passphrase-fd 0 src/environments/environments.prod.ts.gpg
 install:
-  - npm install
-
+- npm install
 script:
-  - npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
-  - npm run e2e -- --protractor-config=e2e/protractor-ci.conf.js
+- npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+- npm run e2e -- --protractor-config=e2e/protractor-ci.conf.js
+env:
+  global:
+    secure: tjdybmJEFTsofbNE0t0KeHoihFo7Qi0EXRPY3ZnxSJMtWV9BXi3/Al2PPOdPiBE7OUfBltRpsnuEH/W+zoEMGmbiy91udvpGoZIxTpnoZx4GbnXGwTVPkNzLhVIKmBHrM68YUVO7cmKAg06CSphgyd3R/WZkuR8Qp41u4rPRvnCzI5mHtnUBCHqd98scVspxgNDdXg1uwXPfYmzmNdV8umdw/tnwv7yvwgQDqkueGQqWLLtoRrFv2IdUWSrCwtI9Qk9y7+h1EGY1uoyR2eFuKlFVXJ9QP4qnwhjbq7Zjx/EKUR6BU3v5h+QSaMBm5r2QOwXpywvpE1ekidaQRt6TH24Z/cJN74TQx4PUW2rxH7NSv7PLMngmpp8ibO9mtcZO2qPC97IH/ApDnItgSELE+9XZBVYYBmda435PtKRvYSFG7xBCsVnM0O1eiTBZPGwpG6IW85b04vf2tg9pZKaJrTB94I+Y+6Kh2PtqioXAkqobSOVIQHsnwesIrr1MB48WUjK/WaNXdeWyv4cvYueMbshxSzEKjIpWz2Gi9B708gKua1dcKkNWNayZj8eybqgQsNWw0w0ClrnHyMS++PRb5tiZE3e7VRt/SB69gx3QslaKfP4w5MXb6nidwPkZfeS5tWlCQwhKjyKZkJ1GwTkZLZVFyAHE8M0riJ3Y+ssEedY=
