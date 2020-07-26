@@ -10,7 +10,7 @@ cache:
   - "./node_modules"
 before_install:
   - echo $super_secret_password | gpg --passphrase-fd 0 src/environments/environment.prod.ts.gpg
-  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+  - google-chrome-stable --headless --disable-gpu --no-sandbox --disable-dev-shm-usage --remote-debugging-port=9222 http://localhost &
 install:
 - npm install
 script:
