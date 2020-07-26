@@ -8,9 +8,11 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display clock', () => {
+
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('rpi-webpage app is running!');
+    expect( page.getClockText()).toMatch(new RegExp('(?:[01]\\d|2[0-3]):(?:[0-5]\\d):(?:[0-5]\\d)'));
+
   });
 
   afterEach(async () => {

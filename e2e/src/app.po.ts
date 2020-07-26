@@ -5,7 +5,8 @@ export class AppPage {
     return browser.get(browser.baseUrl) as Promise<unknown>;
   }
 
-  getTitleText(): Promise<string> {
-    return element(by.css('app-root .content span')).getText() as Promise<string>;
+  getClockText(): Promise<string> {
+    console.log('func to get text');
+    return element(by.css('.clock.main-text')).getText() as Promise<string>;
   }
 }
